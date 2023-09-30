@@ -7,6 +7,24 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <
+        <StackPanel>
+            <TextBlock Text="Categories" Margin="200 10 0 0" FontSize="20"></TextBlock>
+            <ComboBox Name="CategoryComboBox" VerticalAlignment="Top" Margin="-300 20 0 0" HorizontalAlignment="Center" SelectionChanged="CategoryComboBox_SelectionChanged"  Height="30" Width="120"></ComboBox>
+        </StackPanel>
+        <StackPanel>
+            <TextBlock Text="Authors" Margin="390 10 0 0" FontSize="20"></TextBlock>
+            <ComboBox Name="AuthorComboBox" VerticalAlignment="Top" Margin="100 20 0 0" Height="30" Width="120"></ComboBox>
+        </StackPanel>
+
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBox Name="BooksNameTextBox" Height="30" Width="200" HorizontalAlignment="Left" Margin="20 170 0 20"></TextBox>
+                <Button Name="SearchBookButton" Content="Search" Width="120" Margin="20 150 0 0" Height="30" Click="SearchBookButton_Click"></Button>
+                <Button Name="DeleteBookButton" Content="Delete" Width="120" Margin="20 150 0 0" Height="30" Click="DeleteBookButton_Click"></Button>
+                <Button Name="InsertBookButton" Content="Insert" Width="120" Margin="20 150 0 0" Height="30" Click="InsertBookButton_Click"></Button>
+            </StackPanel>
+            <DataGrid Name="DataGrid" Height="200" CanUserAddRows="True" AutoGenerateColumns="True"></DataGrid>
+        </StackPanel>
+        
     </Grid>
 </Window>
